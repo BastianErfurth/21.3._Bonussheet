@@ -37,3 +37,10 @@ class Hammer extends Tool {
     print("Die Farbe ist $color");
   }
 }
+
+void main() {
+  Scewdriver scew1 =
+      Scewdriver(isPocketable: true, lengthInCm: 8, weightInGramm: 85);
+
+  Hammer ham1 = Hammer(color: "green", lengthInCm: 30, weightInGramm: 1500);
+}
