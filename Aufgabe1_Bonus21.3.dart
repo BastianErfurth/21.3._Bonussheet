@@ -1,5 +1,3 @@
-import 'dart:html_common';
-
 class Tool {
   //Attribute
   double lengthInCm;
@@ -8,20 +6,21 @@ class Tool {
   Tool({required this.lengthInCm, required this.weightInGramm});
 }
 
-class Scewdriver extends Tool {
+class Screwdriver extends Tool {
   final bool isPocketable;
 
-  Scewdriver(
+  Screwdriver(
       {required this.isPocketable,
       required super.lengthInCm,
       required super.weightInGramm});
 
-  void PocketCheck() {
+  void pocketCheck() {
     if (isPocketable == true) {
       print("Passt in die Hosentasche");
-    } else
+    } else {
       ;
-    print("Ist zu groß");
+      print("Ist zu groß");
+    }
   }
 }
 
@@ -33,14 +32,17 @@ class Hammer extends Tool {
       required super.lengthInCm,
       required super.weightInGramm});
 
-  void ShowColor() {
+  void showColor() {
     print("Die Farbe ist $color");
   }
 }
 
 void main() {
-  Scewdriver scew1 =
-      Scewdriver(isPocketable: true, lengthInCm: 8, weightInGramm: 85);
+  Screwdriver scew1 =
+      Screwdriver(isPocketable: true, lengthInCm: 8, weightInGramm: 85);
 
   Hammer ham1 = Hammer(color: "green", lengthInCm: 30, weightInGramm: 1500);
+
+  scew1.pocketCheck();
+  ham1.showColor();
 }
